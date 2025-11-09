@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
 import Cursor from './components/Cursor';
-import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,8 +37,7 @@ function App() {
         : 'bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800'
     }`}>
       <Cursor />
-      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-      <Header theme={theme} />
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero theme={theme} />
       <WorkExperience theme={theme} />
       <Projects theme={theme} />

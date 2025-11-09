@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Code2, Smartphone, Palette } from 'lucide-react';
 
 const Hero = ({ theme }) => {
@@ -21,7 +21,7 @@ const Hero = ({ theme }) => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen w-full flex items-center justify-center relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className={`absolute inset-0 ${

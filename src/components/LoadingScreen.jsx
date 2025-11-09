@@ -47,7 +47,7 @@ const LoadingScreen = () => {
           className="text-gray-400"
         >
           Loading Portfolio...
-        </m.p>
+        </motion.p>
         
         <motion.div
           initial={{ width: 0 }}

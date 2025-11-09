@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
-const Header = ({ theme }) => {
+const Header = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -57,6 +58,22 @@ const Header = ({ theme }) => {
                   {item}
                 </motion.a>
               ))}
+
+              <motion.button
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1 }}
+                onClick={toggleTheme}
+                className={`p-3 rounded-full ${
+                  theme === 'dark' 
+                    ? 'bg-gray-800 text-yellow-400' 
+                    : 'bg-yellow-400 text-gray-800'
+                } shadow-lg hover:shadow-xl transition-all duration-300`}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {theme === 'dark' ? <FaSun size={20} /> : <FaMoon size={20} />}
+              </motion.button>
             </nav>
 
             {/* Mobile Menu Button */}
