@@ -146,7 +146,7 @@ const Hero = ({ theme }) => {
           </p>
 
           {/* Skills */}
-          <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 pt-4">
+          <div className="flex flex-wrap justify-start lg:justify-start gap-4 sm:gap-6 pt-4">
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.label}
@@ -209,7 +209,7 @@ const Hero = ({ theme }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-center lg:text-left space-y-6"
+            className="text-left lg:text-left space-y-6"
           >
             <div>
               <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#e94560]">
@@ -222,7 +222,7 @@ const Hero = ({ theme }) => {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end">
+            <div className="flex flex-col sm:flex-row gap-4 justify-start lg:justify-end">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
