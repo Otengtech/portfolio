@@ -108,10 +108,10 @@ const Hero = ({ theme }) => {
       }`}
     >
       {/* Animated Background */}
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+      <canvas ref={canvasRef} className="absolute md:block inset-0 w-3 h-3 md:w-full md:h-full" />
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 md:px-16 py-16 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-16 py-20 grid lg:grid-cols-2 gap-12 items-start relative z-10">
         {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -178,7 +178,7 @@ const Hero = ({ theme }) => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="order-1 lg:order-2 flex flex-col items-center lg:items-start space-y-8"
+          className="order-2 lg:order-1 flex flex-col items-center lg:items-start space-y-8"
         >
           {/* Profile Image */}
           <motion.div
