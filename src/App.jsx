@@ -33,7 +33,7 @@ function App() {
           : 'bg-gradient-to-br from-blue-50 via-indigo-100 to-purple-100 text-gray-800'
       }`}
     >
-      <Header theme={theme} toggleTheme={toggleTheme} />
+      <Header theme={theme} />
 
       <main className="w-full overflow-hidden">
         <Hero theme={theme} />

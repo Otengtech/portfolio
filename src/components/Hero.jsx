@@ -83,7 +83,7 @@ const Hero = ({ theme }) => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       balls.length = 0;
-      for (let i = 0; i < 15; i++) balls.push(new Ball());
+      for (let i = 0; i < 8; i++) balls.push(new Ball());
     };
 
     const animate = () => {
@@ -130,7 +130,7 @@ const Hero = ({ theme }) => {
                 transition={{ duration: 0.9 }}
                 className="text-5xl md:text-6xl font-bold leading-tight"
               >
-                <span className="bg-gradient-to-r from-[#e94560] to-[#0f3460] bg-clip-text text-transparent">
+                <span className="bg-[#e94560] bg-clip-text text-transparent">
                   {dynamicMessages[currentMessage]}
                 </span>
               </motion.h2>
@@ -138,7 +138,7 @@ const Hero = ({ theme }) => {
           </div>
 
           {/* Description */}
-          <p className="text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 text-gray-400">
+          <p className="text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 text-gray-200">
             Senior Software Engineer at Facebook with 10+ years of experience
             specializing in full-stack development, mobile applications, and
             user-centered design. Passionate about creating impactful digital
@@ -157,7 +157,7 @@ const Hero = ({ theme }) => {
                 className="flex flex-col items-center"
               >
                 <div
-                  className={`p-3 rounded-2xl shadow-lg ${
+                  className={`p-3 rounded-2xl cursor-pointer shadow-lg ${
                     theme === "dark"
                       ? "bg-white/10 backdrop-blur-sm"
                       : "bg-white/80 backdrop-blur-sm"
@@ -165,7 +165,7 @@ const Hero = ({ theme }) => {
                 >
                   <skill.icon className="w-6 h-6 sm:w-8 sm:h-8 text-[#e94560]" />
                 </div>
-                <span className="text-xs sm:text-sm mt-2 font-medium text-gray-600 dark:text-gray-400">
+                <span className="text-xs sm:text-sm mt-2 font-medium text-gray-300">
                   {skill.label}
                 </span>
               </motion.div>
@@ -215,7 +215,7 @@ const Hero = ({ theme }) => {
               <h3 className="text-xl sm:text-2xl font-bold mb-2 text-[#e94560]">
                 Let’s Build Something Amazing
               </h3>
-              <p className="text-sm sm:text-base text-gray-400 dark:text-gray-400 leading-relaxed max-w-sm lg:max-w-md">
+              <p className="text-sm sm:text-base text-gray-200 leading-relaxed max-w-sm lg:max-w-md">
                 Ready to bring your ideas to life? I’m passionate about turning
                 innovative concepts into real, powerful digital experiences.
               </p>
